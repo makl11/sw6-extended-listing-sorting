@@ -1,0 +1,17 @@
+{
+  "sw-cms": {
+    "elements": {
+      "extendedListingSorting": {
+        "label": "Erweiterte Listing-Sortierung",
+        "infoText": "Die angezeigten Sortierungen können über das Listingelement konfiguriert werden."
+      }
+    },
+    "blocks": {
+      "sidebar": {
+        "extendedListingSorting": {
+          "label": "Erweiterte Listing-Sortierung"
+        }
+      }
+    }
+  }
+}
