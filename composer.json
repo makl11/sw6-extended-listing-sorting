@@ -1,0 +1,27 @@
+{
+    "name": "m-k/extended-listing-sorting",
+    "description": "Extended Listing Sorting",
+    "type": "shopware-platform-plugin",
+    "version": "1.0.0",
+    "license": "MIT",
+    "require": {
+        "shopware/core": "6.5.*"
+    },
+    "extra": {
+        "shopware-plugin-class": "MK\\ExtendedListingSorting",
+        "label": {
+            "de-DE": "Erweiterte Listing-Sortierung",
+            "en-GB": "Extended Listing Sorting"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "MK\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MK\\Tests\\": "tests/"
+        }
+    }
+}
