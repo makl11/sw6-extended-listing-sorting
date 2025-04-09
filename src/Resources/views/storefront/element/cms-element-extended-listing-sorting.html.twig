@@ -1,0 +1,18 @@
+{% block element_extended_listing_sorting %}
+	{% if cmsPage is defined %}
+		{% set slot = cmsPage.getFirstElementOfType('product-listing') %}
+		{% set listing = slot.data.listing %}
+	{% endif %}
+
+	{% if listing is not null %}
+		<div class="cms-element-{{ element.type }}">
+			{% block element_extended_listing_sorting_content %}
+				{% sw_include '@Storefront/storefront/component/sorting.html.twig' with { current: listing.sorting, sortings: listing.availableSortings } %}
+			{% endblock %}
+		</div>
+	{% elseif app.environment != "prod" %}
+		<div class="cms-element-{{ element.type }}">
+			{% sw_include '@Storefront/storefront/utilities/alert.html.twig' with { type:"danger", content: 'extendedListingSorting.noListingError' | trans  } %}
+		</div>
+	{% endif %}
+{% endblock %}
